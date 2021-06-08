@@ -8,7 +8,7 @@ from sklearn.metrics import mean_squared_error
 from sklearn.metrics import r2_score
 
 #Global Variables
-RESULT_FOLDER = "data"
+INPUT_FOLDER = "data"
 OUTPUT_FOLDER = "output"
 
 def predict_H_ind_for_a_site_with_subCatchment_data(site_number, chronicle=0, approx=0, permeability=27.32):
@@ -30,7 +30,7 @@ def predict_H_ind_for_a_site_with_subCatchment_data(site_number, chronicle=0, ap
     
 def import_input_data():
     # Importing the dataset and storing it inside a dataframe
-    input_data = pd.read_csv(RESULT_FOLDER + "/" + "DataInputPred_SUB.csv", sep=",")
+    input_data = pd.read_csv(INPUT_FOLDER + "/" + "DataInputPred_SUB.csv", sep=",")
     return input_data
 
 def clean_data(input_data):
